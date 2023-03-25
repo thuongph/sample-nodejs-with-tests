@@ -19,10 +19,15 @@ describe('should test Service', () => {
         field: 'field',
       },
     };
+    const _responseData = {
+      data: {
+        field: 'field',
+      },
+    };
     axios.get.mockImplementationOnce(() => Promise.resolve(responseData));
 
     const response = await Service.list();
-    expect(response).toEqual(responseData.data);
+    expect(response).toEqual(_responseData.data);
     expect(axios.get).toHaveBeenCalledTimes(1);
   });
 
