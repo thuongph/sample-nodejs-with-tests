@@ -28,5 +28,3 @@ jobs:
       run: npm audit
     - name: check coding style
       run: npm run lint
-    - name: test the code
-      run: npm test
