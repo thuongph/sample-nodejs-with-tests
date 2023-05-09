@@ -19,10 +19,15 @@ describe('should test Service', () => {
         field: 'field',
       },
     };
+    const demoResponseData = {
+      data: {
+        field: 'another test field 10.05.23',
+      },
+    };
     axios.get.mockImplementationOnce(() => Promise.resolve(responseData));
 
     const response = await Service.list();
-    expect(response).toEqual(responseData.data);
+    expect(response).toEqual(demoResponseData.data);
     expect(axios.get).toHaveBeenCalledTimes(1);
   });
 
