@@ -21,7 +21,7 @@ describe('should test Service', () => {
     };
     const demoResponseData = {
       data: {
-        field: 'test field 10.05.23',
+        field: 'another test field 10.05.23',
       },
     };
     axios.get.mockImplementationOnce(() => Promise.resolve(responseData));
